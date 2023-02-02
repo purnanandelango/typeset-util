@@ -1,0 +1,71 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{custom}[Custom Package]
+
+\RequirePackage{lmodern}
+
+%% 'sans serif' option
+\DeclareOption{sans}{
+  \renewcommand{\familydefault}{\sfdefault}
+}
+
+%% 'roman' option
+\DeclareOption{roman}{
+  \renewcommand{\familydefault}{\rmdefault}
+}
+
+%% Global indentation option
+\newif\if@neverindent\@neverindentfalse
+\DeclareOption{neverindent}{
+  \@neverindenttrue
+}
+
+\ExecuteOptions{roman}
+
+\ProcessOptions\relax
+
+
+\newlength{\parskipdefault}
+\setlength{\parskipdefault}{1ex}
+\newcommand{\neverskip}{ \setlength{\parskip}{0pt} }
+\newcommand{\autoskip}{ \setlength{\parskip}{\parskipdefault} }
+
+\newlength{\pardefault}
+\setlength{\pardefault}{\parindent}
+\newcommand{\neverindent}{ \setlength{\parindent}{0pt} }
+\newcommand{\autoindent}{ \setlength{\parindent}{\pardefault} }
+
+\if@neverindent
+\neverindent
+\fi
+
+\if@neverskip
+\neverskip
+\fi
+
+\RequirePackage{xcolor}
+\colorlet{RedOrange}{red!70!orange}
+\colorlet{DullRed}{red!40!white!70!black}
+\colorlet{PalePurple}{purple!30!blue!40!gray}
+
+% Text formatting
+\newcommand{\highlight}[1]{\textcolor{RedOrange}{#1}}
+
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=PalePurple,
+    filecolor=PalePurple,      
+    urlcolor=purple!20!blue,
+    pdftitle={DDTO-SCP},
+    pdfauthor={Purnanand Elango},
+    citecolor=DullRed,
+}
+
+% Math definitions
+\RequirePackage{amsmath,amssymb,amsthm,bm}
+
+\newcommand{\opn}[1]{\operatorname{#1}}
+\newcommand{\mb}[1]{\mathbb{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+
+\endinput
