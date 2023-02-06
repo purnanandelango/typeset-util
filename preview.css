@@ -3,11 +3,17 @@ body {
     background:#343232;
 }
 pre, code, kbd, samp { color: #ad648e; font-family: 'Latin Modern Mono'; font-size: 1em; }
-h1,h2,h3,h4,p{
+h1,h2,h3,h4,p,li,link,nav,a{
     font-family: 'Latin Modern Sans';
     font-weight:normal;
     color:#d8d0d0;
-    line-height:1em;
+    line-height:1.5em;
+}
+link,nav,a{
+    font-family: 'Latin Modern Sans';
+    font-weight:normal;
+    color:#7391ec;
+    line-height:1.5em;
 }
 h1,h2,h3,h4{ font-weight: normal; }
 h1{ font-size:2.5em; }
