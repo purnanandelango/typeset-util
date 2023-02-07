@@ -5,5 +5,10 @@
   - page formatting in `article` class with math fonts from `mathpazo` package.
   - behavior of hyperlinks via `\hypersetup`.
   
-- The style file `preview.css` specifies [Latin Modern Sans](https://tug.org/FontCatalogue/latinmodernroman/) typeface for VS Code preview of markdown file.
-
+- The style file `preview.css` specifies [Latin Modern Sans](https://tug.org/FontCatalogue/latinmodernroman/) typeface for VS Code preview of markdown file. Place the style file in the root directory of a VS Code workspace and add the following to the workspace settings file `.vscode\settings.json`:
+  ```json
+  {
+      "markdown.styles": ["preview.css"]
+  }
+  ```
+  See the example provide in `.vscode` directory of this repo. Opening this repository in VS Code will apply the style to this preview of this readme file. See the rendered HTML version [here](README.html).
