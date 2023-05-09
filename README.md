@@ -1,5 +1,6 @@
 ---
 layout: home
+title: "`typeset-util`"
 ---
 
 # Utilities for Typesetting
