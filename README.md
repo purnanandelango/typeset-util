@@ -1,8 +1,3 @@
----
-layout: home
-title: "`typeset-util`"
----
-
 # Utilities for Typesetting
 
 - The LaTeX package `custom` specifies:
