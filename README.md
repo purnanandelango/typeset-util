@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Utilities for Typesetting
 
 - The LaTeX package `custom` specifies:
