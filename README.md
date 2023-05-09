@@ -5,7 +5,7 @@
   - page formatting in `article` class with math fonts from `mathpazo` package.
   - behavior of hyperlinks via `\hypersetup`.
   
-- The style file `preview.css` specifies [Latin Modern Sans](https://tug.org/FontCatalogue/latinmodernroman/) typeface for VS Code preview of markdown file. Place the style file in the root directory of a VS Code workspace and add the following to the workspace settings file `.vscode\settings.json`:
+- The style file [`preview.css`](preview.css) specifies [Latin Modern Sans](https://tug.org/FontCatalogue/latinmodernroman/) typeface for VS Code preview of markdown file. Place the style file in the root directory of a VS Code workspace and add the following to the workspace settings file `.vscode\settings.json`:
   ```json
   {
       "markdown.styles": ["preview.css"]
