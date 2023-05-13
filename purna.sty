@@ -1,19 +1,19 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{custom}[Custom Package]
+\ProvidesPackage{purna}[Purna's Formatting Package]
 
-\RequirePackage{mathpazo}
+\RequirePackage{mathpazo} % equivalent to usepackage{...}
 
-%% 'sans serif' option
+% 'sans serif' option
 \DeclareOption{sans}{
   \renewcommand{\familydefault}{\sfdefault}
 }
 
-%% 'roman' option
+% 'roman' option
 \DeclareOption{roman}{
   \renewcommand{\familydefault}{\rmdefault}
 }
 
-%% Global indentation option
+% global indentation option
 \newif\if@neverindent\@neverindentfalse
 \DeclareOption{neverindent}{
   \@neverindenttrue
@@ -21,10 +21,10 @@
 
 \ExecuteOptions{roman}
 
-\ProcessOptions\relax
+\ProcessOptions\relax % terminates the option processing.
 
-\newlength{\parskipdefault}
-\setlength{\parskipdefault}{1ex}
+\newlength{\parskipdefault} % create new length variable
+\setlength{\parskipdefault}{1ex} % assign desired paragraph skip value to this variable
 \newcommand{\neverskip}{ \setlength{\parskip}{0pt} }
 \newcommand{\autoskip}{ \setlength{\parskip}{\parskipdefault} }
 
